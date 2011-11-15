@@ -19,6 +19,7 @@
 # limitations under the License.
 #
 
+
 case node[:platform]
 when "debian", "ubuntu"
   erlpkg = node[:erlang][:gui_tools] ? "erlang" : "erlang-nox"
@@ -32,6 +33,12 @@ when "redhat", "centos", "scientific"
     action :add
   end
   package "erlang"
+when "windows"
+  include_recipe "windows"
+  windows_package "Erlang" do
+   source node[:erlang][:windows_package]
+   action :install
+  end
 else
   package "erlang"
 end

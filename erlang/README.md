@@ -2,6 +2,8 @@ Description
 ===========
 Manages installation of erlang packages. For Debian/Ubuntu this means the distro version of 'erlang'. For RHEL/CentOS this means following the recommendation of RabbitMQ.com and adds an updated version of erlang and access to the EPEL Yum repository.
 
+For windows, it installs from the 14B04 build package from the erlang web site (this is customizable through the [:erlang][:windows_package] attribute.
+
 http://www.rabbitmq.com/server.html
 
 Requirements
