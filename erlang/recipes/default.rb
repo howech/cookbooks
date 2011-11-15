@@ -4,7 +4,7 @@
 # Author:: Matt Ray <matt@opscode.com>
 #
 # Copyright 2008-2009, Joe Williams
-# Copyright 2011, Opscode Inc.
+# Copyright 2011, Opscode Inc.o
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -34,7 +34,6 @@ when "redhat", "centos", "scientific"
   end
   package "erlang"
 when "windows"
-  include_recipe "windows"
   windows_package "Erlang" do
    source node[:erlang][:windows_package]
    action :install
