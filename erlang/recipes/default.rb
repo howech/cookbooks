@@ -37,7 +37,7 @@ when "windows"
   windows_package "Erlang" do
    source node[:erlang][:windows][:package]
    action :install
-   installer_type[:nsis]
+   installer_type :nsis
     not_if { File.exists?( node[:erlang][:windows][:install_dir] ) }
   end
 else
